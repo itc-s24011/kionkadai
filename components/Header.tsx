@@ -1,4 +1,6 @@
 // components/Header.tsx（更新版）
+'use client';
+
 import React from 'react';
 import styles from './Header.module.css';
 

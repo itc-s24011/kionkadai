@@ -1,6 +1,8 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider, FavoritesProvider, AlertsProvider } from '@/lib/contexts';
+import BackgroundInitializer from '@/components/BackgroundInitializer';
 
 export const metadata: Metadata = {
   title: '世界の気温 - Temperature App',
@@ -14,7 +16,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <BackgroundInitializer />
+        <ThemeProvider>
+          <FavoritesProvider>
+            <AlertsProvider>
+              {children}
+            </AlertsProvider>
+          </FavoritesProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

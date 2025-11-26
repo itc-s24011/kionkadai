@@ -28,4 +28,14 @@ export interface TemperatureData {
   timezone: string;
   weeklyData: DailyData[];
   updatedAt: string;
+  weatherCode?: number;
+  weatherDescription?: string;
+  isAlertActive?: boolean;
+}
+
+export interface AlertSetting {
+  cityId: string;
+  maxTemp: number;
+  minTemp: number;
+  enabled: boolean;
 }

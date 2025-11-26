@@ -9,6 +9,7 @@
   cursor: pointer;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   display: block;
+  position: relative;
 }
 
 .card:hover {
@@ -58,6 +59,13 @@
 .green { color: #51cf66; }
 .blue { color: #339af0; }
 .purple { color: #9775fa; }
+
+.alertContainer {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 11;
+}
 
 @media (max-width: 768px) {
   .content {
